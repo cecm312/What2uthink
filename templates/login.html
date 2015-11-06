@@ -1,0 +1,30 @@
+<ion-view view-title="Iniciar Sesion">
+    <ion-content style="background: url(img/fondo-atardecer-t.jpg) center; background-size: cover;" >
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon">
+                    <img src="img/pregunta.png" width="40%">
+                </div>
+                <h1>What2Uthink</h1>
+            </div>
+        </div>
+        <div class="list">
+            <form ng-submit="doLogin()">
+                <label class="item-input"> 
+                    <ion-md-input placeholder="Correo" type="email"  ng-model="loginData.username" required></ion-md-input>
+                </label>
+                <label class="item-input">
+                    <ion-md-input placeholder="Contraseña" type="password" ng-model="loginData.password" required></ion-md-input>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-calm" type="submit">Log in</button>
+                </label>
+            </form>
+        </div>
+        <div style="padding:0 1em 1em 1em;border:0px;text-align: right">
+                <button class="button button-balanced button-block " ng-click="showregister();">Registrarse</button>
+        </div>
+    </ion-content>
+</ion-view>
+
+
