@@ -1,0 +1,37 @@
+<ion-view view-title="Nuevo Producto o Servicio" style="background: url(img/TDP-paisaje.jpg) center; background-size: cover;">
+    <ion-content>
+
+        <form class="form-horizontal" ng-submit="AddProduct(files)" name="form">
+            <div class="list list-inset">
+
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Nombre</span>
+                    <input type="text" placeholder="Nombre" ng-model="article.title" required/>
+                </label>
+
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Descripcion</span>
+                    <textarea rows="5" type="text" placeholder="Descripcion" ng-model="article.description" required/> </textarea>
+                </label>
+
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Costo</span>
+                    <input type="text" placeholder="Costo" ng-model="article.cost" required/>
+                </label>
+
+                <label class="item">
+                    <span class="input-label">Imagen de producto</span>
+                    <div>
+                        <input id="pictures" type="file" ngf-select ng-model="files"  name="file"  
+                                  accept="image/*" ngf-max-size="1MB" ngf-multiple="true" ngf-keep="true" ngf-keep-distinct="true" class="btn btn-primary" required/>
+                    </div>
+                </label>
+                
+                <label class="item">
+                    <input id="singlebutton" ng-disabled="!article.title || !article.description || !files || !article.cost" name="singlebutton" class="btn btn-primary" type="submit" value="Agregar Producto" />
+                </label>
+
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
