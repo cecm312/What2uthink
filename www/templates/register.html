@@ -1,0 +1,57 @@
+<ion-view view-title="Registrarse" style="background: url(img/11872932Sk.jpg) center; background-size: cover;">
+    <ion-content>
+        <form ng-submit="addUser()">
+            <div class="list list-inset">
+                <label class="item item item-input item-floating-label">
+                    <span class="input-label">Nombre(s)</span>
+                    <input type="text" placeholder="Nombre(s)" ng-model="newUser.name" required/>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Apellido(s)</span>
+                    <input type="text" placeholder="Apellido(s)" ng-model="newUser.lastname" required/>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Matricula</span>
+                    <input type="number" placeholder="Matricula" ng-model="newUser.scholarnumber" required/>
+                </label>
+
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Correo</span>
+                    <input type="email" placeholder="Correo" ng-model="newUser.email" required/>
+                </label>
+
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Contraseña</span>
+                    <input type="password" placeholder="Contraseña" ng-model="newUser.password" required/>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Repetir Contraseña</span>
+                    <input type="password" placeholder="Repetir Contraseña" ng-model="newUser.repassword" ng-blur="validatepass()" required/>
+                </label>
+                <br>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Grupo
+                    </div>
+                    <select required ng-model="newUser.group">
+                        <option ng-repeat="group in groups" value="{{group}}">{{group}}</option>
+                    </select>
+                </label>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Equipo
+                    </div>
+                    <select required ng-model="newUser.team">
+                        <option ng-repeat="team in teams" value="{{team}}">{{team}}</option>
+                    </select>
+                </label>
+
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Registrarse</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
+
+

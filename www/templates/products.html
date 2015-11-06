@@ -1,0 +1,13 @@
+<ion-view view-title="Productos o Servicios">
+  <ion-content>
+    <ion-list>
+        <ion-item class="item item-thumbnail-left item-icon-right" ng-repeat="(index,product) in products | orderBy:(product.valoration|promediar)" href="#/app/product/{{product.$id}}" type="item-text-wrap">
+        <img ng-src="{{product.image[0]}}"/>
+        <h2>{{product.title}}</h2>
+        <p>Valoracion:{{product.valoration | promediar | number:'2'}}</p>
+        <p>Valoraciones Obtenidas: {{product.valoration | contarvalorados}} </p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
